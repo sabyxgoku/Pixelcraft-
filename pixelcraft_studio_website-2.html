@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pixelcraft Studio creates clear, modern graph designs that turn data into visual stories.">
+  <title>Pixelcraft Studio — Turning Data Into Visual Stories</title>
+  <style>
+    :root{--bg:#070b14;--panel:#0e1626;--panel2:#111d31;--blue:#28a8ff;--cyan:#63d5ff;--text:#f4f8ff;--muted:#9baac0;--line:rgba(160,190,230,.15);--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 75% 0%,rgba(30,126,220,.15),transparent 34%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.08em;font-size:14px}.mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--blue),#1754db);display:grid;place-items:center;box-shadow:0 0 28px rgba(40,168,255,.3);font-weight:900}
+    .navlinks{display:flex;gap:27px;color:var(--muted);font-size:13px}.navlinks a:hover{color:var(--cyan)}.nav-cta,.btn{border:1px solid rgba(68,177,255,.5);background:linear-gradient(135deg,#1689e9,#2457d8);color:white;border-radius:999px;padding:11px 18px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(20,115,220,.18)}
+    .hero{padding:100px 0 82px;display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-.055em;margin:18px 0}.hero h1 span{background:linear-gradient(90deg,#fff 10%,#58c8ff 90%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);font-size:17px;max-width:540px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn.secondary{background:transparent;box-shadow:none;border-color:var(--line);color:var(--text)}.micro{color:#73849d;font-size:11px;margin-top:22px}
+    .visual{position:relative;min-height:365px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(145deg,rgba(23,43,72,.88),rgba(9,17,31,.96));padding:24px;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.3)}.visual:before{content:"";position:absolute;width:250px;height:250px;border-radius:50%;background:#1689e9;filter:blur(110px);opacity:.22;right:-60px;top:-70px}.visual-head{display:flex;justify-content:space-between;color:#a9bad0;font-size:11px;position:relative}.live{color:#67e5bd}.chart{height:235px;position:relative;margin-top:20px;border-bottom:1px solid rgba(190,210,240,.2);background:repeating-linear-gradient(to bottom,transparent 0 57px,rgba(180,205,240,.1) 58px 59px)}.chart svg{width:100%;height:100%;overflow:visible}.chart-label{display:flex;justify-content:space-between;color:#71839e;font-size:10px;padding-top:10px}.stat{position:absolute;right:22px;bottom:25px;background:rgba(7,15,29,.82);border:1px solid var(--line);border-radius:13px;padding:12px 15px}.stat strong{display:block;font-size:22px;color:#fff}.stat small{color:#8ea2bc;font-size:10px}
+    section{padding:75px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:30px}.section-top h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.04em;margin:8px 0 0}.section-top p{max-width:390px;color:var(--muted);font-size:14px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(18,30,49,.92),rgba(10,17,29,.9));border-radius:18px;padding:20px;min-height:220px}.card h3{font-size:16px;margin:14px 0 5px}.card p{font-size:13px;color:var(--muted);margin:0}.mini{height:105px;border-radius:12px;background:#0a1424;padding:12px;display:flex;align-items:end;gap:8px;overflow:hidden}.bar{flex:1;border-radius:5px 5px 1px 1px;background:linear-gradient(180deg,#58caff,#176bdc);box-shadow:0 0 20px rgba(40,168,255,.15)}.line-art{width:100%;height:100%}.donut{width:88px;height:88px;border-radius:50%;margin:auto;background:conic-gradient(#35b8ff 0 42%,#2869d9 42% 72%,#1b2d48 72%);display:grid;place-items:center}.donut:after{content:"72%";width:54px;height:54px;border-radius:50%;background:#0a1424;display:grid;place-items:center;font-size:12px;font-weight:800}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.about-panel{border:1px solid var(--line);background:var(--panel);border-radius:20px;padding:28px}.about-panel .big{font-size:35px;font-weight:800;letter-spacing:-.04em}.about-panel p,.about-copy p{color:var(--muted);font-size:14px}.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.pill{font-size:11px;color:#b7dfff;border:1px solid rgba(60,160,240,.25);border-radius:99px;padding:7px 11px;background:rgba(28,113,190,.1)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{padding:21px;border-top:1px solid var(--line)}.step b{color:var(--cyan);font-size:12px;letter-spacing:.15em}.step h3{font-size:17px;margin:10px 0 5px}.step p{font-size:13px;color:var(--muted);margin:0}
+    .contact{border:1px solid rgba(55,159,240,.25);border-radius:24px;padding:42px;background:radial-gradient(ellipse at 90% 0%,rgba(30,126,220,.18),transparent 40%),var(--panel)}.contact h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.045em;margin:10px 0}.contact p{color:var(--muted);max-width:570px}.contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}.footer{padding:28px 0 38px;border-top:1px solid var(--line);color:#71839b;font-size:11px;display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:72px 0 55px;gap:35px}.visual{min-height:330px}.cards{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.section-top{display:block}.section-top p{margin-top:12px}.navlinks{gap:13px}.nav-cta{display:none}}
+    @media(max-width:560px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav{height:66px}.navlinks{font-size:11px;gap:11px}.brand{font-size:11px;gap:7px}.mark{width:30px;height:30px}.hero h1{font-size:45px}.lead{font-size:15px}.cards,.steps{grid-template-columns:1fr}.visual{padding:17px;min-height:300px}.chart{height:190px}section{padding:55px 0}.contact{padding:27px 21px}.footer{display:block}.footer span{display:block;margin-top:8px}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#home" aria-label="Pixelcraft Studio home"><span class="mark">P</span><span>PIXELCRAFT <span style="color:#55c9ff">STUDIO</span></span></a>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <a class="nav-cta" href="#contact">Start a project ↗</a>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Independent design studio</div>
+        <h1>Turning Data<br>Into <span>Visual Stories.</span></h1>
+        <p class="lead">We transform numbers and ideas into clear, thoughtful graph designs that are easy to understand and made to stand out.</p>
+        <div class="actions"><a class="btn" href="#contact">Let's work together ↗</a><a class="btn secondary" href="#work">Explore our work</a></div>
+        <div class="micro">GRAPH DESIGN · DATA VISUALIZATION · PRESENTATION VISUALS</div>
+      </div>
+      <div class="visual" aria-label="Decorative sample data visualization">
+        <div class="visual-head"><span>PROJECT OVERVIEW / 2026</span><span class="live">● SAMPLE DATA</span></div>
+        <div class="chart">
+          <svg viewBox="0 0 500 220" preserveAspectRatio="none" role="img" aria-label="Decorative rising line graph">
+            <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#39baff" stop-opacity=".35"/><stop offset="1" stop-color="#39baff" stop-opacity="0"/></linearGradient></defs>
+            <path d="M0 183 C45 165 55 175 95 145 S155 155 190 116 S250 135 285 91 S345 105 380 65 S440 76 500 20 L500 220 L0 220Z" fill="url(#area)"/>
+            <path d="M0 183 C45 165 55 175 95 145 S155 155 190 116 S250 135 285 91 S345 105 380 65 S440 76 500 20" fill="none" stroke="#48c5ff" stroke-width="3" vector-effect="non-scaling-stroke"/>
+            <circle cx="500" cy="20" r="5" fill="#fff" stroke="#48c5ff" stroke-width="3"/>
+          </svg>
+          <div class="stat"><small>VISUAL TREND</small><strong>+28.4%</strong><small>Illustrative sample only</small></div>
+        </div>
+        <div class="chart-label"><span>JAN</span><span>MAR</span><span>MAY</span><span>JUL</span><span>SEP</span><span>DEC</span></div>
+      </div>
+    </div>
+
+    <section class="wrap" id="work">
+      <div class="section-top"><div><div class="eyebrow">Selected concepts</div><h2>Design that makes data click.</h2></div><p>A preview of the visual direction. These are illustrative concepts, not client projects or real business results.</p></div>
+      <div class="cards">
+        <article class="card"><div class="mini"><div class="bar" style="height:38%"></div><div class="bar" style="height:57%"></div><div class="bar" style="height:47%"></div><div class="bar" style="height:83%"></div><div class="bar" style="height:68%"></div><div class="bar" style="height:100%"></div></div><h3>Growth & Performance</h3><p>Clean comparisons and progress-focused visuals.</p></article>
+        <article class="card"><div class="mini" style="align-items:center"><svg class="line-art" viewBox="0 0 300 100" preserveAspectRatio="none"><path d="M0 78 L48 62 L92 69 L135 34 L181 48 L224 15 L300 24" fill="none" stroke="#51c8ff" stroke-width="4"/><path d="M0 78 L48 62 L92 69 L135 34 L181 48 L224 15 L300 24" fill="none" stroke="#51c8ff" stroke-width="12" opacity=".12"/></svg></div><h3>Trends & Insights</h3><p>Readable line charts that highlight the story.</p></article>
+        <article class="card"><div class="mini" style="align-items:center;justify-content:center"><div class="donut"></div></div><h3>Reports & Breakdowns</h3><p>Balanced visual summaries for reports and slides.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="services">
+      <div class="section-top"><div><div class="eyebrow">What we create</div><h2>Simple visuals. Clear message.</h2></div><p>Tell us what you need to explain. We can shape the information into a polished visual.</p></div>
+      <div class="cards">
+        <article class="card"><div class="eyebrow">01 / Charts</div><h3>Custom Graph Designs</h3><p>Bar, line, pie, comparison and progress graphs styled to suit your content.</p></article>
+        <article class="card"><div class="eyebrow">02 / Reports</div><h3>Infographics & Reports</h3><p>Organised data visuals for documents, school or college projects, and business reports.</p></article>
+        <article class="card"><div class="eyebrow">03 / Slides</div><h3>Presentation Visuals</h3><p>Consistent charts and visual elements for clear, confident presentations.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap about" id="about">
+      <div class="about-copy"><div class="eyebrow">A little about us</div><h2 style="font-size:clamp(30px,4vw,44px);letter-spacing:-.045em;line-height:1.12">Good design makes information easier to understand.</h2><p>Pixelcraft Studio is a creative graph-design concept focused on turning data into clean, engaging visuals. Our approach is simple: understand the message, organise the information, and design with purpose.</p></div>
+      <div class="about-panel"><div class="eyebrow">Our approach</div><div class="big">Clarity first.<br><span style="color:#58caff">Style always.</span></div><p>Thoughtful layouts, considered colour, and readable details — without unnecessary clutter.</p><div class="pillrow"><span class="pill">Minimal layouts</span><span class="pill">Custom styling</span><span class="pill">Clear storytelling</span><span class="pill">Made to brief</span></div></div>
+    </section>
+
+    <section class="wrap">
+      <div class="section-top"><div><div class="eyebrow">How it works</div><h2>From raw data to ready design.</h2></div></div>
+      <div class="steps"><div class="step"><b>STEP 01</b><h3>Share your brief</h3><p>Send the data, content, purpose and preferred style.</p></div><div class="step"><b>STEP 02</b><h3>We design</h3><p>We create a visual direction and refine it with your feedback.</p></div><div class="step"><b>STEP 03</b><h3>Receive your files</h3><p>Get the agreed final design in the formats confirmed before the project.</p></div></div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="contact"><div class="eyebrow">Have a project in mind?</div><h2>Let's make your data<br><span style="color:#58caff">stand out.</span></h2><p>Tell us what you're working on and what kind of graph or visual you need. We'll get back to you with the next steps.</p><div class="contact-actions"><a class="btn" href="mailto:YOUR-EMAIL@example.com?subject=Pixelcraft%20Studio%20Project%20Enquiry">Email Pixelcraft Studio ↗</a><a class="btn secondary" href="#home">Back to top ↑</a></div><p style="font-size:11px;margin-top:18px">Before publishing, replace the placeholder email address in this button with your business email.</p></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><div>© 2026 Pixelcraft Studio. All rights reserved.</div><span>Turning Data Into Visual Stories.</span></footer>
+</body>
+</html>
